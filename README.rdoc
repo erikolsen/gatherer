@@ -1,3 +1,3 @@
 == Gatherer Example from Rails 4 Test Prescriptions
 
-This is one of the examples in the book.  Commits are added after every passing test.
+This builds out the example from the book.  One commit at a time.
