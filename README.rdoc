@@ -2,4 +2,4 @@
 
 This builds out the example from the book.  One commit at a time.
 
-*Before the test in chapter 2 First Date will pass.  I needed to change the estimates done Task to have a completed at date.
+* Before the test in chapter 2 First Date will pass.  I needed to change the estimates done Task to have a completed at date.
