@@ -1,6 +1,7 @@
 class Project < ActiveRecord::Base
   
   has_many :tasks
+  validates :name, presence: true
 
   def self.velocity_length_in_days
     # 21 days for 3 week iteration
@@ -16,7 +17,7 @@ class Project < ActiveRecord::Base
   end
 
   def total_size
-    tasks.sum(&:size)
+    tasks.to_a.sum(&:size)
   end
 
   def remaining_size
@@ -24,7 +25,7 @@ class Project < ActiveRecord::Base
   end
 
   def completed_velocity
-    tasks.sum(&:points_toward_velocity)  
+    tasks.to_a.sum(&:points_toward_velocity)  
   end
 
   def current_rate
