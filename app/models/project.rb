@@ -1,13 +1,10 @@
-class Project
-  attr_accessor :tasks, :due_date
+class Project < ActiveRecord::Base
+  
+  has_many :tasks
 
   def self.velocity_length_in_days
     # 21 days for 3 week iteration
     21
-  end
-
-  def initialize
-    @tasks = []
   end
 
   def incomplete_tasks
